@@ -1,0 +1,17 @@
+LineLength:
+  Max: 120
+Documentation:
+  Enabled: false
+AndOr:
+  Enabled: false
+# Allow use of empty lines to visually group code into 'paragraphs'
+EmptyLines:
+  Enabled: false
+Style/EmptyLinesAroundBlockBody:
+  Enabled: false
+Style/EmptyLinesAroundClassBody:
+  Enabled: false
+Style/EmptyLinesAroundMethodBody:
+  Enabled: false
+Style/EmptyLinesAroundModuleBody:
+  Enabled: false

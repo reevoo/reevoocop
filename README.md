@@ -1,12 +1,14 @@
 # Reevoocop
 
-TODO: Write a gem description
+20% MonkeyPatch
+80% YAML
+100% Style
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-    gem 'reevoocop'
+    gem 'reevoocop', require: false
 
 And then execute:
 
@@ -18,12 +20,20 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+In a Rakefile
+```ruby
+require 'reevoocop/rake_task'
+ReevooCop::RakeTask.new(:reevoocop)
+```
 
-## Contributing
+In your shell
+```
+$ reevoocop
+```
 
-1. Fork it ( http://github.com/<my-github-username>/reevoocop/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+## Configuring / Contributing
+
+1. You can't configure this, thats the point.
+2. If you need to change our style guidelines, update the `lib/reevoocop.yml` file and open a pull request.
+3. If you have a good reason to break the guidelines, you can (switch of the cop in question for the code in question, like this)[https://github.com/bbatsov/rubocop#disabling-cops-within-source-code]
+4. Please don't open a pull request unless you work at reevoo, if you don't but would like to (look at our website)[http://reevoo.github.io/]

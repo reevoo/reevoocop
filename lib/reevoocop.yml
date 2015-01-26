@@ -4,6 +4,7 @@ Documentation:
   Enabled: false
 AndOr:
   Enabled: false
+
 # Allow use of empty lines to visually group code into 'paragraphs'
 EmptyLines:
   Enabled: false
@@ -15,3 +16,10 @@ Style/EmptyLinesAroundMethodBody:
   Enabled: false
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
+
+TrailingComma:
+  Enabled: true
+  EnforcedStyleForMultiline: comma
+  SupportedStyles:
+    - comma
+    - no_comma

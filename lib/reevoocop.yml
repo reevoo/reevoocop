@@ -16,6 +16,8 @@ Style/EmptyLinesAroundMethodBody:
   Enabled: false
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
+Style/Semicolon:
+  AllowAsExpressionSeparator: true
 
 TrailingComma:
   Enabled: true

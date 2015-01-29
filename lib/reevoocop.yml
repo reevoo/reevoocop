@@ -23,3 +23,7 @@ TrailingComma:
   SupportedStyles:
     - comma
     - no_comma
+
+AllCops:
+  Exclude:
+    - !ruby/regexp /node_modules/

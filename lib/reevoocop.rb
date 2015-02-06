@@ -11,34 +11,3 @@ module RuboCop
     end
   end
 end
-
-module ReevooCop
-  def with_first_parameter
-    # Style A
-    foo x,
-        y,
-        z
-
-    # Style B
-    foo(
-      x,
-      y,
-      z
-    )
-  end
-
-  def with_fixed_indentation
-    # Style B
-    foo(
-      x,
-      y,
-      z
-    )
-
-    # Style C
-    foo(x,
-        y,
-        z
-    )
-  end
-end

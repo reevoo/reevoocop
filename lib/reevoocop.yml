@@ -16,6 +16,8 @@ Style/EmptyLinesAroundMethodBody:
   Enabled: false
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
+Style/ModuleFunction:
+  Enabled: false
 
 TrailingComma:
   Enabled: true

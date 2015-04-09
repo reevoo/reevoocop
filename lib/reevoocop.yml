@@ -1,7 +1,7 @@
 LineLength:
   Max: 120
 Metrics/MethodLength:
-  Max: 15
+  Enabled: false
 Documentation:
   Enabled: false
 AndOr:

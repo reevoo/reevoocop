@@ -26,6 +26,9 @@ TrailingComma:
     - comma
     - no_comma
 
+Style/MultilineBlockChain:
+  Enabled: false
+
 AllCops:
   Exclude:
     - !ruby/regexp /node_modules/

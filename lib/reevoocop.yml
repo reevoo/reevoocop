@@ -32,4 +32,4 @@ AllCops:
   Exclude:
     - !ruby/regexp /node_modules/
     - !ruby/regexp /db\/schema\.rb/
-    - 'vendor/bundle/**'
+    - 'vendor/bundle/**/*'

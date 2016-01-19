@@ -1,7 +1,12 @@
 LineLength:
   Max: 120
+
+# See https://github.com/reevoo/reevoocop/pull/13
+# * Other metrics like complexity should discorage complexity
+# * Sometimes it is less clear to squeese things on too few lines
 Metrics/MethodLength:
   Enabled: false
+
 Documentation:
   Enabled: false
 AndOr:
@@ -18,9 +23,15 @@ Style/EmptyLinesAroundMethodBody:
   Enabled: false
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
+
+
+# See https://github.com/reevoo/reevoocop/issues/10
 Style/ModuleFunction:
   Enabled: false
 
+# See https://github.com/reevoo/reevoocop/issues/1
+# * For cleaner git diffs
+# * Simpler :sort:
 TrailingComma:
   Enabled: true
   EnforcedStyleForMultiline: comma

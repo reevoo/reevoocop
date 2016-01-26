@@ -15,12 +15,28 @@ AndOr:
 # Allow use of empty lines to visually group code into 'paragraphs'
 EmptyLines:
   Enabled: false
+
+# Keeping parameters in a line makes them easier to read, but in long lines the
+# parameters look ridiculous if using the "with_first_parameter" option, making
+# it more difficult to read the code
+Style/AlignParameters: with_fixed_indentation
+
+# Blank lines are useful in separating methods, specs, etc. from one another,
+# and improves the aesthetics of the code. Consequently, we've enabled
+# EmptyLines around blocks and methods. This is less desirable for Classes and
+# Modules where the definitions may be usefully put on consecutive lines, e.g.:
+#
+# module API
+#   module Auth
+#     class Person
+# ... etc
+#
 Style/EmptyLinesAroundBlockBody:
-  Enabled: false
+  Enabled: true
 Style/EmptyLinesAroundClassBody:
   Enabled: false
 Style/EmptyLinesAroundMethodBody:
-  Enabled: false
+  Enabled: true
 Style/EmptyLinesAroundModuleBody:
   Enabled: false
 
@@ -28,6 +44,12 @@ Style/EmptyLinesAroundModuleBody:
 # See https://github.com/reevoo/reevoocop/issues/10
 Style/ModuleFunction:
   Enabled: false
+
+# See more here: https://viget.com/extend/just-use-double-quoted-ruby-strings
+Style/StringLiterals:
+  EnforcedStyle: double_quotes
+Style/StringLiteralsInInterpolation:
+  EnforcedStyle: double_quotes
 
 # See https://github.com/reevoo/reevoocop/issues/1
 # * For cleaner git diffs

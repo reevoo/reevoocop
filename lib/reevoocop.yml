@@ -19,7 +19,8 @@ EmptyLines:
 # Keeping parameters in a line makes them easier to read, but in long lines the
 # parameters look ridiculous if using the "with_first_parameter" option, making
 # it more difficult to read the code
-Style/AlignParameters: with_fixed_indentation
+Style/AlignParameters:
+  EnforcedStyle: with_fixed_indentation
 
 # Blank lines are useful in separating methods, specs, etc. from one another,
 # and improves the aesthetics of the code. Consequently, we've enabled

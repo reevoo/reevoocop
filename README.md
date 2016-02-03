@@ -1,8 +1,10 @@
 # Reevoocop
 
-20% MonkeyPatch
-80% YAML
-100% Style
+*20% MonkeyPatch, 80% YAML, 100% Style*
+
+Reevoocop uses [RuboCop](https://github.com/bbatsov/rubocop) to enforce Reevoo's style guidelines.
+
+"What are the guidelines?", I hear you bellow. Well, [check out our commented settings file](https://github.com/reevoo/reevoocop/blob/master/lib/reevoocop.yml) for more information.
 
 ## Installation
 
@@ -14,19 +16,20 @@ And then execute:
 
     $ bundle
 
-Or install it yourself as:
+Or install it globally with:
 
     $ gem install reevoocop
 
 ## Usage
 
-In a Rakefile
+In a Rakefile:
+
 ```ruby
 require 'reevoocop/rake_task'
 ReevooCop::RakeTask.new(:reevoocop)
 ```
 
-Or to only have it lint files after the specified commit:
+This can be quite dramatic if you haven't been using a style checker previously and you have, say, 10 years of code written. Why not only lint files changed in the last commit?
 
 ```ruby
 task :reevoocop do
@@ -39,7 +42,8 @@ def files_that_changed_since_t_minus_0
 end
 ```
 
-In your shell
+You can also use Reevoocop stand-alone:
+
 ```
 $ reevoocop
 ```
@@ -48,5 +52,5 @@ $ reevoocop
 
 1. You can't configure this, thats the point.
 2. If you need to change our style guidelines, update the `lib/reevoocop.yml` file and open a pull request.
-3. If you have a good reason to break the guidelines, you can [switch of the cop in question for the code in question, like this](https://github.com/bbatsov/rubocop#disabling-cops-within-source-code)
-4. Please don't open a pull request unless you work at reevoo, if you don't but would like to [look at our website](http://reevoo.github.io/)
+3. If you have a good reason to break the guidelines, you can [switch off the cop for the code like this.](https://github.com/bbatsov/rubocop#disabling-cops-within-source-code)
+4. Please don't open a pull request unless you work at Reevoo, if you don't but would like to, [look at our website!](http://reevoo.github.io/)

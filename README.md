@@ -29,16 +29,19 @@ require 'reevoocop/rake_task'
 ReevooCop::RakeTask.new(:reevoocop)
 ```
 
-This can be quite dramatic if you haven't been using a style checker previously and you have, say, 10 years of code written. Why not only lint files changed in the last commit?
+This can be quite dramatic if you haven't been using a style checker previously and you have, say, 10 years of code written. Why not only lint files changed in the last N commits? This also makes reevoocop much faster in large codebases as you only have to lint recently changed files.
 
 ```ruby
-task :reevoocop do
-  exit 27 unless system("reevoocop #{files_that_changed_since_t_minus_0}")
+require 'reevoocop/rake_task'
+ReevooCop::RakeTask.new(:reevoocop) do |task|
+  task.patterns = reevoocop_files(5)
+  task.options = ['-D'] # Dispays name of failing cop in output. 
+  exit if task.patterns == []
 end
 
-def files_that_changed_since_t_minus_0
-  `git diff-tree --no-commit-id --name-only -r 19c297ff4a91b47c9af735a935c72ea5a2f05791 HEAD`
-    .split("\n").select { |f| f.match(/(rb\z)/) && File.exist?(f) }.join(' ')
+def reevoocop_files(pedantry)
+  `git diff-tree --no-commit-id --name-only -r HEAD~#{pedantry} HEAD`
+    .split("\n").select { |f| f.match(/(\.rb\z)|Rakefile/) && File.exist?(f) && !f.match(/db/) }
 end
 ```
 
@@ -47,6 +50,13 @@ You can also use Reevoocop stand-alone:
 ```
 $ reevoocop
 ```
+
+If you are introducing reevoocop to an existing project, or bumping the reevoocop version try:
+
+```
+$ reevoocop -a
+```
+Anything that can be auto corrected will be, this will save you a lot of time!
 
 ## Configuring / Contributing
 

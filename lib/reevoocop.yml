@@ -62,6 +62,12 @@ TrailingComma:
     - comma
     - no_comma
 
+# See https://github.com/reevoo/reevoocop/issues/18
+# We are fine with using double negation to to force
+# something truthy or falsy to true or false
+Style/DoubleNegation:
+  Enabled: false
+
 AllCops:
   Exclude:
     - !ruby/regexp /node_modules/

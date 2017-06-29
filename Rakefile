@@ -9,5 +9,5 @@ task :reevoocop_cli do
   sh "bin/reevoocop"
 end
 
-task default: [:reevoocop, :reevoocop_cli]
-task build: [:reevoocop, :reevoocop_cli]
+task default: %i[reevoocop reevoocop_cli]
+task build: %i[reevoocop reevoocop_cli]

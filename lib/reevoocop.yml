@@ -19,7 +19,7 @@ EmptyLines:
 # Keeping parameters in a line makes them easier to read, but in long lines the
 # parameters look ridiculous if using the "with_first_parameter" option, making
 # it more difficult to read the code
-Style/AlignParameters:
+Layout/AlignParameters:
   EnforcedStyle: with_fixed_indentation
 
 # Blank lines are useful in separating methods, specs, etc. from one another,
@@ -32,13 +32,13 @@ Style/AlignParameters:
 #     class Person
 # ... etc
 #
-Style/EmptyLinesAroundBlockBody:
+Layout/EmptyLinesAroundBlockBody:
   Enabled: true
-Style/EmptyLinesAroundClassBody:
+Layout/EmptyLinesAroundClassBody:
   Enabled: false
-Style/EmptyLinesAroundMethodBody:
+Layout/EmptyLinesAroundMethodBody:
   Enabled: true
-Style/EmptyLinesAroundModuleBody:
+Layout/EmptyLinesAroundModuleBody:
   Enabled: false
 
 
@@ -55,17 +55,61 @@ Style/StringLiteralsInInterpolation:
 # See https://github.com/reevoo/reevoocop/issues/1
 # * For cleaner git diffs
 # * Simpler :sort:
-TrailingComma:
+Style/TrailingCommaInLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInArguments:
   Enabled: true
   EnforcedStyleForMultiline: comma
-  SupportedStyles:
-    - comma
-    - no_comma
 
 # See https://github.com/reevoo/reevoocop/issues/18
 # We are fine with using double negation to to force
 # something truthy or falsy to true or false
 Style/DoubleNegation:
+  Enabled: false
+
+# See examples/block_call.rb
+Performance/RedundantBlockCall:
+  Enabled: false
+
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
+Style/SignalException:
+  EnforcedStyle: semantic
+Style/ParallelAssignment:
+  Enabled: false
+Metrics/BlockLength:
+  Enabled: false
+Style/NestedParenthesizedCalls:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
+Layout/FirstParameterIndentation:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/MethodMissing:
+  Enabled: false
+Style/IfInsideElse:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Layout/IndentHeredoc:
+  Enabled: false
+Style/StructInheritance:
+  Enabled: false
+Style/MultipleComparison:
+  Enabled: false
+Metrics/ModuleLength:
+  Enabled: false
+Style/IdenticalConditionalBranches:
+  Enabled: false
+Style/VariableName:
   Enabled: false
 
 AllCops:

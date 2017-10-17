@@ -69,6 +69,9 @@ Style/TrailingCommaInArguments:
 Style/DoubleNegation:
   Enabled: false
 
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
 # See examples/block_call.rb
 Performance/RedundantBlockCall:
   Enabled: false

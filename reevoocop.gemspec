@@ -6,8 +6,8 @@ require "reevoocop/version"
 Gem::Specification.new do |spec|
   spec.name          = "reevoocop"
   spec.version       = ReevooCop::VERSION
-  spec.authors       = ["Ed Robinson"]
-  spec.email         = ["ed.robinson@reevoo.com"]
+  spec.authors       = ["Reevoo"]
+  spec.email         = ["developers@reevoo.com"]
   spec.summary       = "Like RuboCop only for Reevoo"
   spec.description   = "RuboCop patched for to enforce the use of Reevoo Style Guidelines"
   spec.homepage      = "http://reevoo.github.io"
@@ -18,7 +18,7 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(/^(test|spec|features)\//)
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "rubocop", "0.49.1"
+  spec.add_dependency "rubocop", "~> 0.53.0"
   spec.add_development_dependency "bundler", "~> 1.5"
   spec.add_development_dependency "rake"
 end

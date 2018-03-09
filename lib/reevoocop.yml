@@ -55,7 +55,11 @@ Style/StringLiteralsInInterpolation:
 # See https://github.com/reevoo/reevoocop/issues/1
 # * For cleaner git diffs
 # * Simpler :sort:
-Style/TrailingCommaInLiteral:
+Style/TrailingCommaInArrayLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
+
+Style/TrailingCommaInHashLiteral:
   Enabled: true
   EnforcedStyleForMultiline: consistent_comma
 

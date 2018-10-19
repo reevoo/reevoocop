@@ -1,3 +1,3 @@
 module ReevooCop
-  VERSION = "0.0.14".freeze
+  VERSION = "1.0.0".freeze
 end

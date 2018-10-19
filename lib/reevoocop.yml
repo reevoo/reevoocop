@@ -100,7 +100,9 @@ Style/GuardClause:
   Enabled: false
 Style/RegexpLiteral:
   Enabled: false
-Style/MethodMissing:
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
   Enabled: false
 Style/IfInsideElse:
   Enabled: false
@@ -119,6 +121,8 @@ Style/IdenticalConditionalBranches:
 Style/VariableName:
   Enabled: false
 Style/ConditionalAssignment:
+  Enabled: false
+Style/RescueStandardError:
   Enabled: false
 
 AllCops:

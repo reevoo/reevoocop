@@ -94,7 +94,7 @@ Style/PercentLiteralDelimiters:
   Enabled: false
 Layout/ClosingParenthesisIndentation:
   Enabled: false
-Layout/FirstParameterIndentation:
+Layout/IndentFirstArgument:
   Enabled: false
 Style/GuardClause:
   Enabled: false

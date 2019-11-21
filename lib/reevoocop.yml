@@ -1,6 +1,6 @@
 require: rubocop-performance
 
-LineLength:
+Metrics/LineLength:
   Max: 120
 
 # See https://github.com/reevoo/reevoocop/pull/13
@@ -9,13 +9,13 @@ LineLength:
 Metrics/MethodLength:
   Enabled: false
 
-Documentation:
+Style/Documentation:
   Enabled: false
-AndOr:
+Style/AndOr:
   Enabled: false
 
 # Allow use of empty lines to visually group code into 'paragraphs'
-EmptyLines:
+Layout/EmptyLines:
   Enabled: false
 
 # Keeping parameters in a line makes them easier to read, but in long lines the

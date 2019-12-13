@@ -21,7 +21,7 @@ Layout/EmptyLines:
 # Keeping parameters in a line makes them easier to read, but in long lines the
 # parameters look ridiculous if using the "with_first_parameter" option, making
 # it more difficult to read the code
-Layout/AlignParameters:
+Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
 
 # Blank lines are useful in separating methods, specs, etc. from one another,
@@ -96,7 +96,7 @@ Style/PercentLiteralDelimiters:
   Enabled: false
 Layout/ClosingParenthesisIndentation:
   Enabled: false
-Layout/IndentFirstArgument:
+Layout/FirstArgumentIndentation:
   Enabled: false
 Style/GuardClause:
   Enabled: false
@@ -110,7 +110,7 @@ Style/IfInsideElse:
   Enabled: false
 Style/NumericPredicate:
   Enabled: false
-Layout/IndentHeredoc:
+Layout/HeredocIndentation:
   Enabled: false
 Style/StructInheritance:
   Enabled: false

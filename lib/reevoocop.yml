@@ -1,29 +1,25 @@
 require: rubocop-performance
 
+Metrics/BlockLength:
+  Enabled: false
 Metrics/LineLength:
   Max: 120
-
 # See https://github.com/reevoo/reevoocop/pull/13
 # * Other metrics like complexity should discorage complexity
 # * Sometimes it is less clear to squeese things on too few lines
 Metrics/MethodLength:
   Enabled: false
-
-Style/Documentation:
-  Enabled: false
-Style/AndOr:
+Metrics/ModuleLength:
   Enabled: false
 
+Naming/VariableName:
+  Enabled: false
+
+Layout/ClosingParenthesisIndentation:
+  Enabled: false
 # Allow use of empty lines to visually group code into 'paragraphs'
 Layout/EmptyLines:
   Enabled: false
-
-# Keeping parameters in a line makes them easier to read, but in long lines the
-# parameters look ridiculous if using the "with_first_parameter" option, making
-# it more difficult to read the code
-Layout/ParameterAlignment:
-  EnforcedStyle: with_fixed_indentation
-
 # Blank lines are useful in separating methods, specs, etc. from one another,
 # and improves the aesthetics of the code. Consequently, we've enabled
 # EmptyLines around blocks and methods. This is less desirable for Classes and
@@ -34,6 +30,8 @@ Layout/ParameterAlignment:
 #     class Person
 # ... etc
 #
+Layout/EmptyLineAfterMagicComment:
+  Enabled: false
 Layout/EmptyLinesAroundBlockBody:
   Enabled: true
 Layout/EmptyLinesAroundClassBody:
@@ -42,90 +40,81 @@ Layout/EmptyLinesAroundMethodBody:
   Enabled: true
 Layout/EmptyLinesAroundModuleBody:
   Enabled: false
+Layout/FirstArgumentIndentation:
+  Enabled: false
+Layout/HeredocIndentation:
+  Enabled: false
+# Keeping parameters in a line makes them easier to read, but in long lines the
+# parameters look ridiculous if using the "with_first_parameter" option, making
+# it more difficult to read the code
+Layout/ParameterAlignment:
+  EnforcedStyle: with_fixed_indentation
 
+# See examples/block_call.rb
+Performance/RedundantBlockCall:
+  Enabled: false
 
+Style/AndOr:
+  Enabled: false
+Style/ConditionalAssignment:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+# See https://github.com/reevoo/reevoocop/issues/18
+# We are fine with using double negation to to force
+# something truthy or falsy to true or false
+Style/DoubleNegation:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/GuardClause:
+  Enabled: false
+Style/IdenticalConditionalBranches:
+  Enabled: false
+Style/IfInsideElse:
+  Enabled: false
+Style/MethodMissingSuper:
+  Enabled: false
+Style/MissingRespondToMissing:
+  Enabled: false
 # See https://github.com/reevoo/reevoocop/issues/10
 Style/ModuleFunction:
   Enabled: false
-
+Style/MultipleComparison:
+  Enabled: false
+Style/NestedParenthesizedCalls:
+  Enabled: false
+Style/NumericPredicate:
+  Enabled: false
+Style/ParallelAssignment:
+  Enabled: false
+Style/PercentLiteralDelimiters:
+  Enabled: false
+Style/RegexpLiteral:
+  Enabled: false
+Style/RescueStandardError:
+  Enabled: false
+Style/SignalException:
+  EnforcedStyle: semantic
 # See more here: https://viget.com/extend/just-use-double-quoted-ruby-strings
 Style/StringLiterals:
   EnforcedStyle: double_quotes
 Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
-
+Style/StructInheritance:
+  Enabled: false
 # See https://github.com/reevoo/reevoocop/issues/1
 # * For cleaner git diffs
 # * Simpler :sort:
 Style/TrailingCommaInArrayLiteral:
   Enabled: true
   EnforcedStyleForMultiline: consistent_comma
-
-Style/TrailingCommaInHashLiteral:
-  Enabled: true
-  EnforcedStyleForMultiline: consistent_comma
-
 Style/TrailingCommaInArguments:
   Enabled: true
   EnforcedStyleForMultiline: comma
-
-# See https://github.com/reevoo/reevoocop/issues/18
-# We are fine with using double negation to to force
-# something truthy or falsy to true or false
-Style/DoubleNegation:
-  Enabled: false
-
-Style/FrozenStringLiteralComment:
-  Enabled: false
-
-# See examples/block_call.rb
-Performance/RedundantBlockCall:
-  Enabled: false
-
-Layout/EmptyLineAfterMagicComment:
-  Enabled: false
-Style/SignalException:
-  EnforcedStyle: semantic
-Style/ParallelAssignment:
-  Enabled: false
-Metrics/BlockLength:
-  Enabled: false
-Style/NestedParenthesizedCalls:
-  Enabled: false
-Style/PercentLiteralDelimiters:
-  Enabled: false
-Layout/ClosingParenthesisIndentation:
-  Enabled: false
-Layout/FirstArgumentIndentation:
-  Enabled: false
-Style/GuardClause:
-  Enabled: false
-Style/RegexpLiteral:
-  Enabled: false
-Style/MethodMissingSuper:
-  Enabled: false
-Style/MissingRespondToMissing:
-  Enabled: false
-Style/IfInsideElse:
-  Enabled: false
-Style/NumericPredicate:
-  Enabled: false
-Layout/HeredocIndentation:
-  Enabled: false
-Style/StructInheritance:
-  Enabled: false
-Style/MultipleComparison:
-  Enabled: false
-Metrics/ModuleLength:
-  Enabled: false
-Style/IdenticalConditionalBranches:
-  Enabled: false
-Naming/VariableName:
-  Enabled: false
-Style/ConditionalAssignment:
-  Enabled: false
-Style/RescueStandardError:
-  Enabled: false
+Style/TrailingCommaInHashLiteral:
+  Enabled: true
+  EnforcedStyleForMultiline: consistent_comma
 
 AllCops:
   Exclude:

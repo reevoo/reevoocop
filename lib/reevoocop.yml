@@ -32,6 +32,8 @@ Layout/EmptyLines:
 #
 Layout/EmptyLineAfterMagicComment:
   Enabled: false
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
 Layout/EmptyLinesAroundBlockBody:
   Enabled: true
 Layout/EmptyLinesAroundClassBody:
@@ -49,13 +51,34 @@ Layout/HeredocIndentation:
 # it more difficult to read the code
 Layout/ParameterAlignment:
   EnforcedStyle: with_fixed_indentation
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+Lint/DuplicateElsifCondition:
+  Enabled: true
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+Lint/RaiseException:
+  Enabled: true
+Lint/StructNewOverride:
+  Enabled: true
 
 # See examples/block_call.rb
 Performance/RedundantBlockCall:
   Enabled: false
 
+Style/AccessorGrouping:
+  Enabled: true
 Style/AndOr:
   Enabled: false
+Style/ArrayCoercion:
+  Enabled: false
+Style/BisectedAttrAccessor:
+  Enabled: true
+Style/CaseLikeIf:
+  Enabled: true
 Style/ConditionalAssignment:
   Enabled: false
 Style/Documentation:
@@ -65,10 +88,22 @@ Style/Documentation:
 # something truthy or falsy to true or false
 Style/DoubleNegation:
   Enabled: false
+Style/ExponentialNotation:
+  Enabled: true
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/GuardClause:
   Enabled: false
+Style/HashAsLastArrayItem:
+  Enabled: false
+Style/HashEachMethods:
+  Enabled: true
+Style/HashLikeCase:
+  Enabled: true
+Style/HashTransformKeys:
+  Enabled: true
+Style/HashTransformValues:
+  Enabled: true
 Style/IdenticalConditionalBranches:
   Enabled: false
 Style/IfInsideElse:
@@ -90,12 +125,24 @@ Style/ParallelAssignment:
   Enabled: false
 Style/PercentLiteralDelimiters:
   Enabled: false
+Style/RedundantAssignment:
+  Enabled: true
+Style/RedundantFetchBlock:
+  Enabled: true
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+Style/RedundantRegexpCharacterClass:
+  Enabled: true
+Style/RedundantRegexpEscape:
+  Enabled: true
 Style/RegexpLiteral:
   Enabled: false
 Style/RescueStandardError:
   Enabled: false
 Style/SignalException:
   EnforcedStyle: semantic
+Style/SlicingWithRange:
+  Enabled: true
 # See more here: https://viget.com/extend/just-use-double-quoted-ruby-strings
 Style/StringLiterals:
   EnforcedStyle: double_quotes

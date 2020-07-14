@@ -2,8 +2,6 @@ require: rubocop-performance
 
 Metrics/BlockLength:
   Enabled: false
-Metrics/LineLength:
-  Max: 120
 # See https://github.com/reevoo/reevoocop/pull/13
 # * Other metrics like complexity should discorage complexity
 # * Sometimes it is less clear to squeese things on too few lines
@@ -46,6 +44,8 @@ Layout/FirstArgumentIndentation:
   Enabled: false
 Layout/HeredocIndentation:
   Enabled: false
+Layout/LineLength:
+  Max: 120
 # Keeping parameters in a line makes them easier to read, but in long lines the
 # parameters look ridiculous if using the "with_first_parameter" option, making
 # it more difficult to read the code

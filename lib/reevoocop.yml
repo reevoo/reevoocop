@@ -150,8 +150,6 @@ Style/IfInsideElse:
   Enabled: false
 Style/KeywordParametersOrder:
   Enabled: true
-Style/MissingSuper:
-  Enabled: false
 Style/MissingRespondToMissing:
   Enabled: false
 # See https://github.com/reevoo/reevoocop/issues/10

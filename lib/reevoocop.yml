@@ -62,11 +62,19 @@ Lint/ConstantDefinitionInBlock:
   Enabled: true
 Lint/DeprecatedOpenSSLConstant:
   Enabled: true
+Lint/DuplicateBranch:
+  Enabled: true
 Lint/DuplicateElsifCondition:
+  Enabled: true
+Lint/DuplicateRegexpCharacterClassElement:
   Enabled: true
 Lint/DuplicateRequire:
   Enabled: true
 Lint/DuplicateRescueException:
+  Enabled: true
+Lint/EmptyBlock:
+  Enabled: true
+Lint/EmptyClass:
   Enabled: true
 Lint/EmptyConditionalBody:
   Enabled: true
@@ -80,6 +88,8 @@ Lint/MissingSuper:
   Enabled: false
 Lint/MixedRegexpCaptureTypes:
   Enabled: true
+Lint/NoReturnInBeginEndBlocks:
+  Enabled: true
 Lint/OutOfRangeRegexpRef:
   Enabled: true
 Lint/RaiseException:
@@ -88,9 +98,15 @@ Lint/SelfAssignment:
   Enabled: true
 Lint/StructNewOverride:
   Enabled: true
+Lint/ToEnumArguments:
+  Enabled: true
 Lint/TopLevelReturnWithArgument:
   Enabled: true
 Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: true
+Lint/UnexpectedBlockArity:
+  Enabled: true
+Lint/UnmodifiedReduceAccumulator:
   Enabled: true
 Lint/UnreachableLoop:
   Enabled: true
@@ -107,11 +123,15 @@ Style/AccessorGrouping:
   Enabled: true
 Style/AndOr:
   Enabled: false
+Style/ArgumentsForwarding:
+  Enabled: true
 Style/ArrayCoercion:
   Enabled: false
 Style/BisectedAttrAccessor:
   Enabled: true
 Style/CaseLikeIf:
+  Enabled: true
+Style/CollectionCompact:
   Enabled: true
 Style/ConditionalAssignment:
   Enabled: false
@@ -119,6 +139,8 @@ Style/CombinableLoops:
   Enabled: true
 Style/Documentation:
   Enabled: false
+Style/DocumentDynamicEvalDefinition:
+  Enabled: true
 # See https://github.com/reevoo/reevoocop/issues/18
 # We are fine with using double negation to to force
 # something truthy or falsy to true or false
@@ -150,8 +172,6 @@ Style/IfInsideElse:
   Enabled: false
 Style/KeywordParametersOrder:
   Enabled: true
-Style/MissingSuper:
-  Enabled: false
 Style/MissingRespondToMissing:
   Enabled: false
 # See https://github.com/reevoo/reevoocop/issues/10
@@ -159,8 +179,12 @@ Style/ModuleFunction:
   Enabled: false
 Style/MultipleComparison:
   Enabled: false
+Style/NegatedIfElseCondition:
+  Enabled: true
 Style/NestedParenthesizedCalls:
   Enabled: false
+Style/NilLambda:
+  Enabled: true
 Style/NumericPredicate:
   Enabled: false
 Style/OptionalBooleanParameter:
@@ -169,6 +193,8 @@ Style/ParallelAssignment:
   Enabled: false
 Style/PercentLiteralDelimiters:
   Enabled: false
+Style/RedundantArgument:
+  Enabled: true
 Style/RedundantAssignment:
   Enabled: true
 Style/RedundantFetchBlock:
@@ -202,6 +228,8 @@ Style/StringLiteralsInInterpolation:
   EnforcedStyle: double_quotes
 Style/StructInheritance:
   Enabled: false
+Style/SwapValues:
+  Enabled: true
 # See https://github.com/reevoo/reevoocop/issues/1
 # * For cleaner git diffs
 # * Simpler :sort:
